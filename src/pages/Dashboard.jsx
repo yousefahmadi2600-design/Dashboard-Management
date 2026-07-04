@@ -1,7 +1,6 @@
 import DashboardKpiCard from "../components/dashboard/DashboardKpiCard";
 import { useContext, useEffect, useState } from "react";
 import AnimatedMulti from "../components/ui/Select";
-import { SelectContext } from "../context/SelectContext";
 import Pagination from "../pagination/Pagination";
 import { useNavigate } from "react-router-dom";
 import Table from "../components/ui/Table";
@@ -51,7 +50,6 @@ function Dashboard() {
   });
   //pagination
   const studentPerPage = 6;
-  const { setActiveSidebar } = useContext(SelectContext);
   const {
     currentPage,
     setCurrentPage,
@@ -218,7 +216,6 @@ function Dashboard() {
                 list={studentsInPages}
                 onStudentClick={(student) => {
                   navigate(`/student/${student.id}`);
-                  setActiveSidebar("");
                 }}
                 cols={recentStudentCols}
                 title={"students"}
@@ -270,7 +267,6 @@ function Dashboard() {
                 key={index}
                 onStudentClick={(student) => {
                   navigate(`/student/${student.id}`);
-                  setActiveSidebar("");
                 }}
               />
             ))}

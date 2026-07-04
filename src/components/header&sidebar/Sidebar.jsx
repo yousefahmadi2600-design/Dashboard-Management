@@ -1,6 +1,5 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { SelectContext } from "../../context/SelectContext";
 import {
   LayoutDashboard,
   LibraryBigIcon,
@@ -9,7 +8,7 @@ import {
   Users,
 } from "lucide-react";
 function Sidebar() {
-  const { activeSidebar, setActiveSidebar } = useContext(SelectContext);
+  const [activeSidebar, setActiveSidebar] = useState();
   const location = useLocation();
   useEffect(() => {
     setActiveSidebar(() => {
@@ -154,11 +153,11 @@ function Sidebar() {
             <div className="grid grid-flow-row gap-1 text-center">
               <div className="relative">
                 <Moon
-                  className={`absolute bottom-1 left-2/10 size-6 scale-0 rotate-90 stroke-black opacity-0 transition-all duration-300 lg:size-7 dark:scale-100 dark:rotate-0 dark:stroke-gray-100 dark:opacity-100`}
+                  className={`absolute bottom-1 left-1/4 size-6 scale-0 rotate-90 stroke-black opacity-0 transition-all duration-300 lg:size-7 dark:scale-100 dark:rotate-0 dark:stroke-gray-100 dark:opacity-100`}
                 />
 
                 <Sun
-                  className={`absolute bottom-1 left-2/10 size-6 scale-100 rotate-0 stroke-black opacity-100 transition-all duration-300 lg:size-7 dark:scale-0 dark:rotate-90 dark:stroke-gray-100 dark:opacity-0`}
+                  className={`absolute bottom-1 left-1/4 size-6 scale-100 rotate-0 stroke-black opacity-100 transition-all duration-300 lg:size-7 dark:scale-0 dark:rotate-90 dark:stroke-gray-100 dark:opacity-0`}
                 />
               </div>
               <span className={`${!isDark ? "hidden" : "block"} h-9 lg:h-4`}>

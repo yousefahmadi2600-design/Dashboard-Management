@@ -3,7 +3,6 @@ import TableSkeleton from "../components/skeleton/TableSkeleton";
 import Table from "../components/ui/Table";
 import Pagination from "../pagination/Pagination";
 import { useContext, useEffect, useState } from "react";
-import { SelectContext } from "../context/SelectContext";
 import AnimatedMulti from "../components/ui/Select";
 import CustomSelect from "../components/ui/customSelect";
 import { toast } from "sonner";
@@ -26,7 +25,6 @@ import { StudentsContext } from "../context/StudentsContext";
 
 function Students() {
   const { storedStudents, setStoredStudents } = useContext(StudentsContext)
-  const { setActiveSidebar } = useContext(SelectContext);
   const navigate = useNavigate();
   // skeleton
   const isLoading = useSkeleton();
@@ -197,7 +195,7 @@ function Students() {
 
   const onStudentClick = (student) => {
     navigate(`/student/${student.id}`);
-    setActiveSidebar("");
+
   };
   const handleAddCancel = () => {
     setIsAddOpen(false);
