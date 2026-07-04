@@ -260,7 +260,7 @@ function Dashboard() {
           </div>
         </div>
         {!isLoading && (
-          <div className="mb-2 grid grid-cols-2 gap-1">
+          <div className="mb-2 grid grid-cols-2 gap-2">
             {studentsInPages.map((student, index) => (
               <StudentCard
                 student={student}

@@ -127,19 +127,20 @@ function Navigation() {
             onChange={(e) => setSearchValue(e.target.value)}
             placeholder="Search ..."
             type="text"
-            className="h-9 w-full rounded-3xl bg-slate-100 pl-11 outline-none sm:h-12 sm:pl-13 lg:h-11 dark:bg-slate-900 dark:placeholder:text-slate-400"
+            className="h-9 w-full rounded-3xl bg-slate-100 pl-11 outline-none sm:h-12 sm:pl-13 lg:h-11 dark:bg-slate-900 dark:placeholder:text-slate-400 dark:text-white"
           />
           <Search className="absolute top-1 left-2 size-7 stroke-slate-700 sm:top-2 sm:left-3 sm:size-8 dark:stroke-slate-400" />
         </div>
         <div
-          className={`${searchSlice.length !== 0 ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-2 opacity-0"} w-full bg-slate-300 px-0 transition-all duration-300`}
+          className={`${isSearchOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-2 opacity-0"} w-full bg-slate-300 px-0 transition-all duration-300`}
         >
           {searchSlice.map((student) => (
             <div
-              className="flex items-center gap-3.5 px-6 py-2 pt-2 hover:cursor-pointer"
+              className="flex items-center gap-3.5 px-6 py-2 pt-2 hover:cursor-pointer dark:bg-slate-950"
               onClick={() => {
                 navigate(`/student/${student.id}`);
                 setIsModalOpen(false);
+                setIsSearchOpen(false);
               }}
             >
               <img src="#" className="h-10 w-10" />
@@ -152,7 +153,7 @@ function Navigation() {
             </div>
           ))}
           {searchResult.length >= 6 && (
-            <div className="flex items-center justify-center p-2">
+            <div className="flex items-center justify-center p-2 dark:bg-slate-950">
               <p className="text-gray-800 dark:text-gray-400">
                 Showing{" "}
                 <span className="text-lg font-semibold text-black dark:text-white">

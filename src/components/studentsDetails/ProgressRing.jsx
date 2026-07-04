@@ -13,10 +13,9 @@ const ProgressRing = ({ percentage, rate, title }) => {
               cx="90"
               cy="90"
               r={radius}
-              stroke="#E3E3E3"
               strokeWidth="10"
               fill="transparent"
-              className=""
+              className="stroke-slate-200 dark:stroke-slate-700"
             />
 
             <circle
@@ -51,7 +50,7 @@ const ProgressRing = ({ percentage, rate, title }) => {
             )}
           </div>
         </div>
-        <p className="text-center text-violet-800 dark:text-violet-400 lg:hidden">
+        <p className="text-center text-violet-600 dark:text-violet-500 lg:hidden">
           {title}
         </p>
       </div>

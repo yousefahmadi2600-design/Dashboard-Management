@@ -41,7 +41,7 @@ export default function useStudentActions(
       attendanceRate: null,
       image: null,
       progress: null,
-      gpa: 33,
+      gpa: null,
       major: data.major,
       email: data.email,
     };

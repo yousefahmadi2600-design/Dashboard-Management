@@ -16,7 +16,7 @@ function StudentCard({
       <div className="relative justify-start">
         <img
           src={student.image}
-          className="h-30 w-full overflow-hidden rounded-xl object-cover"
+          className="h-40 w-full overflow-hidden rounded-xl object-fill"
         />
         <div
           className={`${statusClasses[student.status]} absolute top-0 right-1 mt-1 rounded-2xl px-1 text-sm`}

@@ -24,7 +24,7 @@ import useStudentActions from "../hooks/useStudentActions";
 import { StudentsContext } from "../context/StudentsContext";
 
 function Students() {
-  const { storedStudents, setStoredStudents } = useContext(StudentsContext)
+  const { storedStudents, setStoredStudents } = useContext(StudentsContext);
   const navigate = useNavigate();
   // skeleton
   const isLoading = useSkeleton();
@@ -57,11 +57,11 @@ function Students() {
   });
   // pagination
   const [studentPerPage, setStudentPerPage] = useState(() => {
-    const num = localStorage.getItem("num");
-    if (num) {
-      return JSON.parse(num);
+    const studentInPage = localStorage.getItem("studentInPage");
+    if (studentInPage) {
+      return JSON.parse(studentInPage);
     }
-    localStorage.setItem("num", 8);
+    localStorage.setItem("studentInPage", 8);
     return 8;
   });
   const {
@@ -193,10 +193,7 @@ function Students() {
     storedStudents,
   );
 
-  const onStudentClick = (student) => {
-    navigate(`/student/${student.id}`);
-
-  };
+  const onStudentClick = (student) => navigate(`/student/${student.id}`);
   const handleAddCancel = () => {
     setIsAddOpen(false);
   };
