@@ -1,5 +1,5 @@
 import { faker } from "@faker-js/faker";
-const statuses = ["Active","Inactive","Completed"]
+const statuses = ["In Progress","Not Started","Completed"]
 
 faker.seed(5);
 export const projects = Array.from({ length: 30 }, (_, index) => {
@@ -7,7 +7,7 @@ export const projects = Array.from({ length: 30 }, (_, index) => {
   return {
     id: index + 1,
     name: faker.company.catchPhrase(),
-    status,
+    status:status,
     score:
       status === "Completed" ? faker.number.int({ min: 70, max: 100 }) : null,
     dueDate: faker.date.recent().toLocaleDateString(),

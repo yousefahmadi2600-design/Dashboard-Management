@@ -16,7 +16,7 @@ function StudentCourseCard({ course }) {
       <h2
         className={`${statusClasses[course.status]} absolute right-3 bottom-3 rounded-2xl border px-2 text-sm md:text-[12px]`}
       >
-        {course.status}
+        {course.status==="Upcoming"?"Not Started":course.status}
       </h2>
     </div>
   );

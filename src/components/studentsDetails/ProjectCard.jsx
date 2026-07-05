@@ -12,7 +12,7 @@ function ProjectCard({ project }) {
       <h2
         className={`${statusClasses[project.status]} absolute right-3 bottom-3 rounded-2xl border px-2 text-sm`}
       >
-        {project.status}
+        {project.status === "Inactive"?"Not Started":project.status}
       </h2>
     </div>
   );
