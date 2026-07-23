@@ -37,27 +37,27 @@ The project provides an intuitive interface for managing students, courses, and 
 
 ### Dashboard (Dark)
 
-![Dashboard Dark](./screenshots/dashboard-dark.jpg)
+![Dashboard Dark](./screenshots/dashboard-dark.png)
 
 ### Dashboard (Light)
 
-![Dashboard Light](./screenshots/dashboard-light.jpg)
+![Dashboard Light](./screenshots/dashboard-light.png)
 
 ### Students List
 
-![Students](./screenshots/students.jpg)
+![Students](./screenshots/students-light.png)
 
 ### Student Overview
 
-![Student Overview](./screenshots/student-overview.jpg)
+![Student Overview](./screenshots/student-light.png)
 
 ### Courses
 
-![Courses](./screenshots/courses.jpg)
+![Courses](./screenshots/courses-dark.png)
 
 ### Mobile View
 
-![Mobile](./screenshots/mobile.jpg)
+![Mobile](./screenshots/student-dark-mobile.png)
 
 ---
 
