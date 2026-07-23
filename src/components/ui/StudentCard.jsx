@@ -36,9 +36,9 @@ function StudentCard({
               <span className="font-semibold">{student.attendanceRate}%</span>
             </p>
             <p className="flex items-center text-sm text-gray-800 sm:text-base dark:text-gray-300">
-              <div className="ml-px flex h-4.5 w-4.5 items-center justify-center rounded-full border-2 border-gray-500 text-[9px] font-semibold text-gray-500">
+              <span className="ml-px flex h-4.5 w-4.5 items-center justify-center rounded-full border-2 border-gray-500 text-[9px] font-semibold text-gray-500">
                 &nbsp;A+
-              </div>
+              </span>
               &nbsp; GPA : <span className="font-semibold">{student.gpa}</span>
             </p>
           </>

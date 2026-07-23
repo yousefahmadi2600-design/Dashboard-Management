@@ -24,7 +24,7 @@ The project provides an intuitive interface for managing students, courses, and 
 
 - React
 - Vite
-- Bootstrap 5
+- Tailwind
 - React Query
 - React Router DOM
 - React Hook Form

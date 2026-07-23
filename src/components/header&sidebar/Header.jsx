@@ -82,13 +82,19 @@ function Header() {
         </div>
         {/* search input for big size */}
         <div className="relative hidden flex-2 lg:block">
-          <input
+          {/* <input
             value={searchValue}
             placeholder="Search ..."
             type="text"
-            className="h-9 w-full rounded-3xl bg-slate-100 pl-11 lg:h-11 lg:pl-13 dark:bg-slate-700 dark:placeholder:text-slate-500"
+            className= pl-11 lg:h-11 lg:pl-13 "
             onClick={() => setIsModalOpen(true)}
-          />
+          /> */}
+          <div
+            onClick={() => setIsModalOpen(true)}
+            className="flex h-9 w-full items-center rounded-3xl bg-slate-100 pl-11 hover:cursor-pointer lg:h-11 lg:pl-13 dark:bg-slate-700 dark:text-slate-500"
+          >
+            {searchValue ? searchValue : "Search ..."}
+          </div>
           <Search className="absolute top-1.5 left-2 size-7 stroke-slate-700 lg:left-3 lg:size-8 dark:stroke-slate-500" />
         </div>
         <div className="relative h-9 w-9 rounded-full bg-violet-500 p-1.5 shadow-sm shadow-slate-300 hover:cursor-pointer hover:bg-violet-400 lg:h-11 lg:min-h-11 lg:w-11 dark:bg-violet-600 dark:shadow-slate-900 dark:hover:bg-violet-500">

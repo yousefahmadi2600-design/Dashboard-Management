@@ -14,12 +14,14 @@ function Table({ list, cols, onStudentClick, title }) {
 
         <tbody className="border border-slate-300 bg-violet-400 dark:border-slate-700 dark:bg-violet-500">
           {list.length === 0 ? (
-            <td
-              className="py-3 text-center text-lg text-white lg:py-8 lg:text-2xl"
-              colSpan={10}
-            >
-              No {title} found
-            </td>
+            <tr className="bg-slate-500 even:bg-slate-300 hover:cursor-pointer dark:bg-slate-600 dark:even:bg-slate-700">
+              <td
+                className="py-3 text-center text-lg text-white lg:py-8 lg:text-2xl"
+                colSpan={10}
+              >
+                No {title} found
+              </td>
+            </tr>
           ) : (
             list.map((item, index) => (
               <tr
