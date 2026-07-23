@@ -1,16 +1,143 @@
-# React + Vite
+# 🎓 Dashboard Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **Student Management Dashboard** built with **React**, **Vite**, and **Bootstrap**.  
+The project provides an intuitive interface for managing students, courses, and academic statistics with support for both **Light** and **Dark** themes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 📊 Dashboard with summary statistics
+- 👨‍🎓 Student management
+- 📄 Student profile & overview
+- 📚 Course management
+- 🔍 Search and filtering
+- 🌙 Light / Dark Mode
+- 📱 Responsive design
+- ⚡ Fast development using Vite
+- 🔄 Data fetching with React Query
+- ✅ Form validation using React Hook Form & Yup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- Bootstrap 5
+- React Query
+- React Router DOM
+- React Hook Form
+- Yup
+- Axios
+
+---
+
+## 📷 Screenshots
+
+### Dashboard (Dark)
+
+![Dashboard Dark](./screenshots/dashboard-dark.jpg)
+
+### Dashboard (Light)
+
+![Dashboard Light](./screenshots/dashboard-light.jpg)
+
+### Students List
+
+![Students](./screenshots/students.jpg)
+
+### Student Overview
+
+![Student Overview](./screenshots/student-overview.jpg)
+
+### Courses
+
+![Courses](./screenshots/courses.jpg)
+
+### Mobile View
+
+![Mobile](./screenshots/mobile.jpg)
+
+---
+
+## 📁 Project Structure
+
+```text
+src
+│
+├── components
+├── layouts
+├── pages
+├── hooks
+├── context
+├── services
+├── constants
+├── data
+├── assets
+└── utils
+```
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository
+
+```bash
+git clone https://github.com/yousefahmadi2600-design/Dashboard-Management.git
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run development server
+
+```bash
+npm run dev
+```
+
+Build project
+
+```bash
+npm run build
+```
+
+---
+
+## 🎯 Pages
+
+- Dashboard
+- Students List
+- Student Overview
+- Courses
+
+---
+
+## 📌 Future Improvements
+
+- Authentication
+- Role-based Access Control
+- Real Backend Integration
+- CRUD Operations
+- Charts & Analytics
+- Notifications
+- Unit Testing
+
+---
+
+## 👨‍💻 Author
+
+**Yousef Ahmadi**
+
+GitHub:
+https://github.com/yousefahmadi2600-design
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a **Star ⭐** on GitHub.
