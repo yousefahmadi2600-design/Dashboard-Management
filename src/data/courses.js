@@ -1,23 +1,33 @@
 import { faker } from "@faker-js/faker";
-
+import img1 from "../assets/courses/course1.webp";
+import img2 from "../assets/courses/course2.webp";
+import img3 from "../assets/courses/course3.webp";
+import img4 from "../assets/courses/course4.webp";
+import img5 from "../assets/courses/course5.webp";
+import img6 from "../assets/courses/course6.webp";
+import img7 from "../assets/courses/course7.webp";
+import img8 from "../assets/courses/course8.webp";
+import img9 from "../assets/courses/course9.webp";
+import img10 from "../assets/courses/course10.webp";
+import img11 from "../assets/courses/course11.webp";
+import img12 from "../assets/courses/course12.webp";
+import img13 from "../assets/courses/course13.webp";
+import img14 from "../assets/courses/course14.webp";
 const courseUrl = [
-  "https://i.postimg.cc/tJZSWs43/fran-innocenti-n-Owkd4Yvd-Ug-unsplash.jpg",
-  "https://i.postimg.cc/T3Cs8MFy/frederick-shaw-ll-XWZUAQz5A-unsplash.jpg",
-  "https://i.postimg.cc/d3Y6k4g0/ux-indonesia-zwa-FDXF3v-Wc-unsplash.jpg",
-  "https://i.postimg.cc/vH87Jgs6/istockphoto-2214849457-2048x2048.webp",
-  "https://i.postimg.cc/dQND0LCG/quilia-1-a-A2Fadydc-unsplash.jpg",
-  "https://i.postimg.cc/4d9ZNxTg/vitaly-gariev-RDf6Cvns88Q-unsplash.jpg",
-  "https://i.postimg.cc/MHpCf6CW/evgeniy-surzhan-VFMhqki-L6E4-unsplash.jpg",
-  "https://i.postimg.cc/X7wc0FHp/dom-fou-YRMWVcdyhm-I-unsplash.jpg",
-  "https://i.postimg.cc/4ddBfd7N/organizer-eth63-Sz-Kxz-Vr-Gt-L4-unsplash.jpg",
-  "https://i.postimg.cc/qqRC9hFB/pexels-micahways-10498800.jpg",
-  "https://i.postimg.cc/FskY345C/pexels-max-fischer-5212342.jpg",
-  "https://i.postimg.cc/13Z3FVKs/pexels-andy-barbour-6683580.jpg",
-  "https://i.postimg.cc/1Xqynyn3/pexels-cottonbro-7395911.jpg",
-  "https://i.postimg.cc/QMYBcxt9/pexels-rdne-7092339.jpg",
-  "https://i.postimg.cc/HkpjK78P/pexels-yankrukov-8199151.jpg",
-  "https://i.postimg.cc/0Nhk86rk/windows-p74ndn-YWRY4-unsplash.jpg",
-  "https://i.postimg.cc/2SKmwqQC/mimi-thian-vd-XMSi-X-n6M-unsplash.jpg",
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  img8,
+  img9,
+  img10,
+  img11,
+  img12,
+  img13,
+  img14,
 ];
 const majors = [
   "Software engineering",

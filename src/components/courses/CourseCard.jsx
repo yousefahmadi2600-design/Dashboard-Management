@@ -10,7 +10,7 @@ function CourseCard({ course }) {
             FULL
           </span>
         )}
-        <img src={course.image} className="h-full w-full object-cover" />
+        <img src={course.image} className="h-full w-full object-center object-contain" />
       </div>
       <div className="mt-2 flex items-start justify-between lg:mt-4">
         <div className="flex flex-wrap gap-2">

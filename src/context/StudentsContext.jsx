@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { allStudents } from "../data/stusents";
+import { allStudents } from "../data/students";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const StudentsContext = createContext();

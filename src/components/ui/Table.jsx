@@ -1,7 +1,7 @@
 function Table({ list, cols, onStudentClick, title }) {
   return (
     <>
-      <table className="lg:min-w-max lg:text-base hidden w-full overflow-hidden rounded-xl text-sm md:table lg:rounded-2xl">
+      <table className="hidden w-full overflow-hidden rounded-xl text-sm md:table lg:min-w-max lg:rounded-2xl lg:text-base">
         <thead className="bg-slate-600 text-left text-gray-100 dark:bg-slate-800 dark:text-gray-300">
           <tr>
             {cols.map((col, index) => (
@@ -15,7 +15,7 @@ function Table({ list, cols, onStudentClick, title }) {
         <tbody className="border border-slate-300 bg-violet-400 dark:border-slate-700 dark:bg-violet-500">
           {list.length === 0 ? (
             <td
-              className="py-3 text-center text-lg lg:py-8 lg:text-2xl text-white"
+              className="py-3 text-center text-lg text-white lg:py-8 lg:text-2xl"
               colSpan={10}
             >
               No {title} found
@@ -23,7 +23,7 @@ function Table({ list, cols, onStudentClick, title }) {
           ) : (
             list.map((item, index) => (
               <tr
-                className="bg-slate-200 even:bg-slate-300 hover:bg-slate-500 dark:bg-slate-600 dark:even:bg-slate-700 dark:hover:bg-slate-800"
+                className="bg-slate-200 even:bg-slate-300 hover:cursor-pointer hover:bg-slate-500 dark:bg-slate-600 dark:even:bg-slate-700 dark:hover:bg-slate-800"
                 key={index}
                 onClick={() => {
                   onStudentClick?.(item);

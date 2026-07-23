@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { StudentsContext } from "../../context/StudentsContext";
 import useClickOutside from "../../hooks/useClickOutside";
 
-function Navigation() {
+function Header() {
   const { storedStudents } = useContext(StudentsContext);
   const profRef = useRef();
   const profIconRef = useRef();
@@ -103,9 +103,9 @@ function Navigation() {
             if (isSearchOpen) setIsSearchOpen(false);
             setIsProfOpen(!isProfOpen);
           }}
-          className="flex h-9 w-9 items-center rounded-3xl bg-violet-500 text-slate-100 shadow-sm shadow-slate-300 md:w-40 md:p-0.5 lg:h-11 lg:min-w-40 lg:flex-1 dark:bg-violet-600 dark:shadow-slate-900"
+          className="flex h-9 w-9 items-center rounded-full bg-violet-500 text-slate-100 shadow-sm shadow-slate-300 md:w-40 md:p-0.5 lg:h-11 lg:min-w-40 lg:flex-1 dark:bg-violet-600 dark:shadow-slate-900"
         >
-          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-400 text-sm text-white md:h-8 md:w-8 lg:h-10 lg:w-9">
+          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-400 text-sm text-white md:h-8 md:w-8 lg:h-10 lg:w-10">
             YA
           </div>
           <div className="ml-2 hidden py-1 leading-4 md:block">
@@ -127,7 +127,7 @@ function Navigation() {
             onChange={(e) => setSearchValue(e.target.value)}
             placeholder="Search ..."
             type="text"
-            className="h-9 w-full rounded-3xl bg-slate-100 pl-11 outline-none sm:h-12 sm:pl-13 lg:h-11 dark:bg-slate-900 dark:placeholder:text-slate-400 dark:text-white"
+            className="h-9 w-full rounded-3xl bg-slate-100 pl-11 outline-none sm:h-12 sm:pl-13 lg:h-11 dark:bg-slate-900 dark:text-white dark:placeholder:text-slate-400"
           />
           <Search className="absolute top-1 left-2 size-7 stroke-slate-700 sm:top-2 sm:left-3 sm:size-8 dark:stroke-slate-400" />
         </div>
@@ -143,7 +143,7 @@ function Navigation() {
                 setIsSearchOpen(false);
               }}
             >
-              <img src="#" className="h-10 w-10" />
+              <img src={student.image} className="h-10 w-10 rounded-full" />
               <p className="text-md dark:text-white">
                 <span className="text-gray-500">name</span> : {student.name}{" "}
                 <span className="text-gray-500">| ID</span> :{" "}
@@ -200,7 +200,7 @@ function Navigation() {
                     setIsModalOpen(false);
                   }}
                 >
-                  <img src="#" className="h-10 w-10" />
+                  <img src={student.image} className="h-10 w-10 rounded-full" />
                   <p className="text-md dark:text-white">
                     <span className="text-gray-500">name</span> : {student.name}{" "}
                     <span className="text-gray-500">| ID</span> :{" "}
@@ -260,4 +260,4 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+export default Header;
