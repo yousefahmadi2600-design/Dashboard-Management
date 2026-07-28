@@ -1,5 +1,5 @@
 import { courses } from "../data/courses";
-import CourseCard from "../components/courses/courseCard";
+import CourseCard from "../components/courses/CourseCard";
 import Pagination from "../pagination/Pagination";
 import { useEffect, useState } from "react";
 import CourseCardSkeleton from "../components/skeleton/CourseCardSkeleton";

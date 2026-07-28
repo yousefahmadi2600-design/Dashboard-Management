@@ -4,7 +4,7 @@ import Table from "../components/ui/Table";
 import Pagination from "../pagination/Pagination";
 import { useContext, useEffect, useState } from "react";
 import AnimatedMulti from "../components/ui/Select";
-import CustomSelect from "../components/ui/customSelect";
+import CustomSelect from "../components/ui/CustomSelect";
 import { toast } from "sonner";
 import { statusClasses } from "../constants/statusClasses";
 import { majorClasses } from "../constants/majorClasses";
