@@ -1,16 +1,25 @@
 import { Star, User } from "lucide-react";
 import { majorClasses } from "../../constants/majorClasses";
 import { statusClasses } from "../../constants/statusClasses";
+import { useState } from "react";
 function CourseCard({ course }) {
+  const [isHover, setIsHover] = useState(false);
   return (
-    <div className="grid grid-rows-[auto_auto_1fr_rauto] rounded-lg bg-slate-50 p-2 shadow-sm shadow-slate-300 duration-300 hover:bg-slate-400 lg:p-3 dark:bg-slate-900 dark:text-gray-200 dark:shadow-slate-900 lg:dark:hover:bg-slate-800">
+    <div
+      onMouseEnter={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
+      className={`${isHover ? "bg-slate-400 lg:dark:bg-slate-800" : "bg-slate-50 dark:bg-slate-900"} grid grid-rows-[auto_auto_1fr_rauto] rounded-lg p-2 shadow-sm shadow-slate-300 transition-all duration-300 lg:p-3 dark:text-gray-200 dark:shadow-slate-900`}
+    >
       <div className="relative h-50 w-full overflow-hidden rounded-lg">
         {course.participant === 40 && (
           <span className="absolute top-1 left-0 ml-3 flex items-center rounded-xl bg-green-400 px-2 font-semibold text-green-700 lg:px-3 lg:text-lg lg:font-bold">
             FULL
           </span>
         )}
-        <img src={course.image} className="h-full w-full object-center object-cover" />
+        <img
+          src={course.image}
+          className={`${isHover?"scale-105":"scale-100"} transition-all duration-200 h-full w-full object-cover object-center`}
+        />
       </div>
       <div className="mt-2 flex items-start justify-between lg:mt-4">
         <div className="flex flex-wrap gap-2">

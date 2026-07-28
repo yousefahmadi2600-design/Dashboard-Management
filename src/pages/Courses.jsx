@@ -14,6 +14,7 @@ function Courses() {
   //selectors
   const [categoryState, setCategoryState] = useState([]);
   const [courseStatusState, setCourseStatusState] = useState([]);
+  useEffect(() => setCurrentPage(1), [courseStatusState, categoryState]);
   // search
   const [searchValue, setSearchValue] = useState("");
   //filtering
@@ -38,7 +39,7 @@ function Courses() {
     itemInPage: courseInPage,
     totalItems: totalCourses,
   } = usePagination(coursePerPage, filteredCourseList);
-  
+
   return (
     <div className="px-3">
       <div className="items-center pt-2 lg:mr-6 lg:ml-3 lg:flex lg:gap-2 lg:py-3">

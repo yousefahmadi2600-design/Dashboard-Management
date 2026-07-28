@@ -109,7 +109,7 @@ function Header() {
             if (isSearchOpen) setIsSearchOpen(false);
             setIsProfOpen(!isProfOpen);
           }}
-          className="flex h-9 w-9 items-center rounded-full bg-violet-500 text-slate-100 shadow-sm shadow-slate-300 md:w-40 md:p-0.5 lg:h-11 lg:min-w-40 lg:flex-1 dark:bg-violet-600 dark:shadow-slate-900"
+          className="flex h-9 w-9 items-center rounded-full bg-violet-500 text-slate-100 shadow-sm shadow-slate-300 md:w-40 md:p-0.5 lg:h-10.5 lg:min-w-40 lg:flex-1 dark:bg-violet-600 dark:shadow-slate-900"
         >
           <div className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-400 text-sm text-white md:h-8 md:w-8 lg:h-10 lg:w-10">
             YA
