@@ -1,5 +1,5 @@
 import { faker } from "@faker-js/faker";
-import { courses, graduatedCourses } from "./courses";
+import { studentCourses, graduatedCourses } from "./courses";
 import { graduatedProjects, projects } from "./projects";
 
 const majors = [
@@ -15,7 +15,7 @@ export const recentStudents = Array.from({ length: 20 }, (_, index) => {
   const smallCourseList = [];
   const smallProjectList = [];
   for (let i = 0; i < faker.number.int({ min: 2, max: 7 }); i++) {
-    smallCourseList.push(courses[faker.number.int({ min: 0, max: 6 })]);
+    smallCourseList.push(studentCourses[faker.number.int({ min: 0, max: 6 })]);
     smallProjectList.push(projects[faker.number.int({ min: 0, max: 7 })]);
   }
 
@@ -44,7 +44,7 @@ export const students = Array.from({ length: 300 }, (_, index) => {
 
   const bigProjectList = [];
   for (let i = 0; i < faker.number.int({ min: 10, max: 20 }); i++) {
-    bigCourseList.push(courses[faker.number.int({ min: 0, max: 29 })]);
+    bigCourseList.push(studentCourses[faker.number.int({ min: 0, max: 29 })]);
     bigProjectList.push(projects[faker.number.int({ min: 0, max: 29 })]);
   }
   const uniqueBigCourses = [...new Set(bigCourseList)];

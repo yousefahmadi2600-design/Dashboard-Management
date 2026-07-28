@@ -14,6 +14,7 @@ function Courses() {
   //selectors
   const [categoryState, setCategoryState] = useState([]);
   const [courseStatusState, setCourseStatusState] = useState([]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => setCurrentPage(1), [courseStatusState, categoryState]);
   // search
   const [searchValue, setSearchValue] = useState("");

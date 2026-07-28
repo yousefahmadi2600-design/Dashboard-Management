@@ -72,3 +72,28 @@ export const graduatedCourses = Array.from({ length: 30 }, (_, index) => {
     progress: 100,
   };
 });
+
+export const studentCourseStatus = ["In Progress", "Not Started", "Completed"];
+faker.seed(4);
+export const studentCourses = Array.from({ length: 30 }, (_, index) => {
+  const status = studentCourseStatus[faker.number.int({ min: 0, max: 2 })];
+  const category = [];
+  for (let i = 0; i < 3; i++) {
+    category.push(majors[faker.number.int({ min: 0, max: 3 })]);
+  }
+  const uniqueCategory = [...new Set(category)];
+  return {
+    id: index + 1,
+    name: faker.commerce.productName(),
+    instructor: faker.person.fullName(),
+    credits: faker.number.int({ min: 1, max: 3 }),
+    like: faker.number.float({ min: 2, max: 5, fractionDigits: 1 }),
+    participant: faker.number.int({ min: 30, max: 40 }),
+    categories: uniqueCategory,
+    price: faker.number.float({ min: 10, max: 30, fractionDigits: 1 }),
+    status: status,
+    progress:
+      status === "Completed" ? 100 : faker.number.int({ min: 30, max: 90 }),
+    image: courseUrl[index % courseUrl.length],
+  };
+});

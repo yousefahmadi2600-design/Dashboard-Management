@@ -111,7 +111,7 @@ function Header() {
           }}
           className="flex h-9 w-9 items-center rounded-full bg-violet-500 text-slate-100 shadow-sm shadow-slate-300 md:w-40 md:p-0.5 lg:h-10.5 lg:min-w-40 lg:flex-1 dark:bg-violet-600 dark:shadow-slate-900"
         >
-          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-400 text-sm text-white md:h-8 md:w-8 lg:h-10 lg:w-10">
+          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-400 text-sm text-white hover:cursor-pointer md:h-8 md:w-8 lg:h-10 lg:w-10">
             YA
           </div>
           <div className="ml-2 hidden py-1 leading-4 md:block">
@@ -125,7 +125,7 @@ function Header() {
       <div
         ref={dropdownSearchRef}
         onClick={(e) => e.stopPropagation()}
-        className={`${isSearchOpen ? " pointer-events-auto translate-y-2 opacity-100" : "pointer-events-none translate-y-0 opacity-0"} fixed top-14 right-0 left-0 bg-slate-300 px-4 py-2 transition-all duration-300 sm:ml-16 md:ml-18 lg:hidden dark:bg-slate-950`}
+        className={`${isSearchOpen ? " pointer-events-auto translate-y-2 opacity-100" : "pointer-events-none translate-y-0 opacity-0"} fixed top-14 right-0 left-0 overflow-hidden bg-slate-300 px-4 py-2 transition-all duration-300 sm:ml-16 md:ml-18 lg:hidden dark:bg-slate-950`}
       >
         <div className="relative">
           <input
@@ -248,7 +248,7 @@ function Header() {
         >
           <div className="mt-4 grid grid-cols-1 gap-1">
             <div
-              className={`mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-orange-400 text-sm text-white lg:h-20 lg:w-20`}
+              className={`mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-orange-400 text-sm text-white hover:cursor-pointer lg:h-20 lg:w-20`}
             >
               YA
             </div>
@@ -257,7 +257,7 @@ function Header() {
               Manager
             </div>
           </div>
-          <button className="w-full border-t border-gray-400 p-2">
+          <button className="w-full border-t border-gray-400 p-2 hover:cursor-pointer">
             Sign out
           </button>
         </div>

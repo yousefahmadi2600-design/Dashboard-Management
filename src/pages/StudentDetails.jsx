@@ -3,7 +3,7 @@ import HeroSection from "../components/studentsDetails/HeroSection";
 import ProgressRing from "../components/studentsDetails/ProgressRing";
 import Table from "../components/ui/Table";
 import Pagination from "../pagination/Pagination";
-import {  useContext, useState } from "react";
+import { useContext, useState } from "react";
 import AnimatedMulti from "../components/ui/Select";
 import { projectStatusOptions } from "../constants/statusOptions";
 import StudentCourseCard from "../components/studentsDetails/StudentCourseCard";
@@ -16,9 +16,9 @@ import { StudentsContext } from "../context/StudentsContext";
 
 function StudentDetails() {
   // loading selekton
-  const {isLoading} = useSkeleton()
+  const { isLoading } = useSkeleton();
   // access to student
-  const {storedStudents} = useContext(StudentsContext)
+  const { storedStudents } = useContext(StudentsContext);
   const { id } = useParams();
   const student = storedStudents.find((item) => item.id === Number(id));
 
@@ -175,9 +175,10 @@ function StudentDetails() {
             {isLoading && <TableSkeleton totalCols={coursesInPages.length} />}
             {!isLoading && (
               <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:hidden">
-                {coursesInPages.map((course, index) => (
-                  <StudentCourseCard course={course} key={index} />
-                ))}
+                {coursesInPages.map((course, index) => {
+                  console.log(course);
+                  return <StudentCourseCard course={course} key={index} />;
+                })}
               </div>
             )}
             {isLoading && (
