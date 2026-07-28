@@ -140,9 +140,10 @@ function Header() {
         <div
           className={`${isSearchOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-2 opacity-0"} w-full bg-slate-300 px-0 transition-all duration-300`}
         >
-          {searchSlice.map((student) => (
+          {searchSlice.map((student, index) => (
             <div
-              className="flex items-center gap-3.5 px-6 py-2 pt-2 hover:cursor-pointer dark:bg-slate-950"
+              key={index}
+              className="flex items-center gap-3.5 border-0 border-b border-b-gray-500 px-6 py-2 pt-2 hover:cursor-pointer dark:bg-slate-950"
               onClick={() => {
                 navigate(`/student/${student.id}`);
                 setIsModalOpen(false);
@@ -150,11 +151,12 @@ function Header() {
               }}
             >
               <img src={student.image} className="h-10 w-10 rounded-full" />
-              <p className="text-md dark:text-white">
-                <span className="text-gray-500">name</span> : {student.name}{" "}
-                <span className="text-gray-500">| ID</span> :{" "}
-                {student.studentId}{" "}
-                <span className="text-gray-500">| major</span> : {student.major}
+              <p className="lg:text-md text-sm dark:text-white">
+                <span className="text-gray-500">Name</span> : {student.name}{" "}
+                <br />
+                <span className="text-gray-500">ID</span> :{" "}
+                {student.studentId} <br />
+                <span className="text-gray-500">Major</span> : {student.major}
               </p>
             </div>
           ))}
@@ -198,8 +200,9 @@ function Header() {
               onClick={(e) => e.stopPropagation()}
               className={`${searchSlice.length !== 0 ? " pointer-events-auto translate-y-2 opacity-100" : "pointer-events-none translate-y-0 opacity-0"} fixed top-32 left-1/2 z-40 w-150 -translate-x-1/2 rounded-b-2xl bg-zinc-200 pt-5 transition-all duration-300 dark:bg-slate-900`}
             >
-              {searchSlice.map((student) => (
+              {searchSlice.map((student, index) => (
                 <div
+                  key={index}
                   className="flex items-center gap-3.5 px-6 py-2 pt-2 hover:cursor-pointer"
                   onClick={() => {
                     navigate(`/student/${student.id}`);
@@ -208,23 +211,23 @@ function Header() {
                 >
                   <img src={student.image} className="h-10 w-10 rounded-full" />
                   <p className="text-md dark:text-white">
-                    <span className="text-gray-500">name</span> : {student.name}{" "}
+                    <span className="text-gray-500">Name</span> : {student.name}{" "}
                     <span className="text-gray-500">| ID</span> :{" "}
                     {student.studentId}{" "}
-                    <span className="text-gray-500">| major</span> :{" "}
+                    <span className="text-gray-500">| Major</span> :{" "}
                     {student.major}
                   </p>
                 </div>
               ))}
               {searchResult.length >= 6 && (
                 <div className="flex items-center justify-center p-2">
-                  <p className="text-gray-800 dark:text-gray-400">
+                  <p className="text-gray-800 dark:text-gray-400 text-sm">
                     Showing{" "}
-                    <span className="text-lg font-semibold text-black dark:text-white">
+                    <span className="font-semibold text-black dark:text-white">
                       5
                     </span>{" "}
                     of{" "}
-                    <span className="text-lg font-semibold text-black dark:text-white">
+                    <span className="font-semibold text-black dark:text-white">
                       {searchResult.length}
                     </span>{" "}
                     results

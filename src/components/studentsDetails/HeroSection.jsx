@@ -79,14 +79,14 @@ function HeroSection({ student }) {
             </div>
             <div>
               <p className="text-gray-500 dark:text-gray-400">Email</p>
-              <p>{student.email}</p>
+              <p className="wrap-break-word">{student.email}</p>
             </div>
           </div>
         </div>
       )}
 
       {!isLoading && (
-        <div className="mt-2 grid grid-cols-2 gap-0.5 md:mt-0 md:grid-cols-3 md:gap-3 lg:gap-2 lg:my-2 lg:grid-cols-5">
+        <div className="mt-2 grid grid-cols-2 gap-0.5 md:mt-0 md:grid-cols-3 md:gap-3 lg:my-2 lg:grid-cols-5 lg:gap-2">
           <StudentKpiCard
             titel={student.gpa === null ? "N/A" : student.gpa}
             description={student.gpa === null ? "No data yet" : "GPA"}
