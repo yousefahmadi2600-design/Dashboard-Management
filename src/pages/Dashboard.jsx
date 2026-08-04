@@ -128,9 +128,9 @@ function Dashboard() {
     className: "text-amber-500",
   };
   return (
-    <div className="z-10 px-4 sm:px-3 lg:pb-7">
+    <div className="z-10 px-3 lg:pb-7">
       <div className="">
-        <h1 className="px-2 py-2 text-xl font-bold sm:text-xl lg:py-6 dark:text-gray-200">
+        <h1 className="text-md py-2 font-semibold sm:text-xl lg:py-6 dark:text-gray-200">
           Summery
         </h1>
       </div>
@@ -138,7 +138,7 @@ function Dashboard() {
         <div className="grid grid-cols-2 gap-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-2">
           <DashboardKpiCard
             icon={
-              <GraduationCap className="size-6 h-12 stroke-black sm:size-8 lg:size-10 dark:stroke-white" />
+              <GraduationCap className="size-7 h-10 stroke-black sm:size-8 sm:h-12 lg:size-10 dark:stroke-white" />
             }
             detail={totalStudent}
             titele={"Total Students"}
@@ -146,7 +146,15 @@ function Dashboard() {
           />
           <DashboardKpiCard
             icon={
-              <Zap className="size-6 h-12 stroke-black sm:size-8 lg:size-10 dark:stroke-white" />
+              <FileChartColumn className="size-6 h-10 stroke-black sm:size-8 sm:h-12 lg:size-10 dark:stroke-white" />
+            }
+            detail={AverageGpa}
+            titele={"Average GPA"}
+            description={AverageGpaDesc}
+          />
+          <DashboardKpiCard
+            icon={
+              <Zap className="size-6 h-10 stroke-black sm:size-8 sm:h-12 lg:size-10 dark:stroke-white" />
             }
             detail={activeStudents}
             titele={"Active Students"}
@@ -154,19 +162,11 @@ function Dashboard() {
           />
           <DashboardKpiCard
             icon={
-              <AlertCircle className="size-6 h-12 stroke-black sm:size-8 lg:size-10 dark:stroke-white" />
+              <AlertCircle className="size-6 h-10 stroke-black sm:size-8 sm:h-12 lg:size-10 dark:stroke-white" />
             }
             detail={atRiskStudents}
             titele={"At Risk Students"}
             description={atRiskStudentsDesc}
-          />
-          <DashboardKpiCard
-            icon={
-              <FileChartColumn className="size-6 h-12 stroke-black sm:size-8 lg:size-10 dark:stroke-white" />
-            }
-            detail={AverageGpa}
-            titele={"Average GPA"}
-            description={AverageGpaDesc}
           />
         </div>
       )}
@@ -234,10 +234,9 @@ function Dashboard() {
       </div>
       <div className="mb-3 rounded-lg md:hidden lg:rounded-2xl lg:p-3 dark:text-slate-200">
         <div className="mb-2">
-          <h1 className="ml-2 py-2 text-lg font-bold sm:text-xl lg:px-2 lg:text-2xl">
+          <h1 className="font-semibold py-2 sm:text-xl lg:px-2 lg:text-2xl">
             Recent students
           </h1>
-
           <div className="flex flex-row-reverse flex-wrap justify-end gap-2 lg:gap-3 dark:text-gray-200">
             <Input
               placeholder={"Search students by name or ID"}

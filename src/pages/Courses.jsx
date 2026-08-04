@@ -79,15 +79,15 @@ function Courses() {
       </div>
       <div className="">
         {!isLoading && (
-          <div className="mb-3 grid h-full grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mb-3 grid h-full grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {courseInPage.map((course, index) => {
               return <CourseCard course={course} key={index} />;
             })}
           </div>
         )}
         {isLoading && (
-          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
-            {Array.from({ length: 3 }).map((_, index) => {
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+            {[1, 2, 3, 4].map((_, index) => {
               return <CourseCardSkeleton key={index} />;
             })}
           </div>

@@ -201,7 +201,7 @@ function Students() {
     setIsEditOpen(false);
   };
   return (
-    <div className="px-4 dark:text-white">
+    <div className="px-3 sm:px-4 dark:text-white">
       <div className="items-center lg:flex lg:py-5">
         <div className="flex h-8 gap-2 py-2">
           <Input

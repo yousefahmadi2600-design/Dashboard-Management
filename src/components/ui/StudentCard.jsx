@@ -1,4 +1,4 @@
-import { Eye, Trash2, UserPen } from "lucide-react";
+import { Trash2, UserPen } from "lucide-react";
 import { statusClasses } from "../../constants/statusClasses";
 function StudentCard({
   student,
@@ -13,7 +13,7 @@ function StudentCard({
       onClick={() => onStudentClick(student)}
       className="grid grid-rows-[auto_1fr_auto_auto] rounded-xl bg-slate-50 p-1 shadow-sm shadow-slate-300 dark:bg-slate-900 dark:text-white dark:shadow-slate-900"
     >
-      <div className="relative justify-start">
+      <div className="relative w-full">
         <img
           src={student.image}
           className="h-40 w-full overflow-hidden rounded-xl object-fill"
@@ -24,22 +24,19 @@ function StudentCard({
           {student.status}
         </div>
       </div>
-      <div className="p-2 pb-0 text-lg font-semibold">{student.name} </div>
+      <h3 className="p-2 pb-0">{student.name}</h3>
       <div className="p-2 pt-0">
-        <p className="text-sm text-gray-800 sm:text-base dark:text-gray-300">
+        <p className="text-sm font-light text-gray-700 sm:text-base dark:text-gray-300">
           {student.major}
         </p>
         {allDetails && (
           <>
-            <p className="flex items-center text-sm text-gray-800 sm:text-base dark:text-gray-300">
-              <Eye className="size-5 stroke-gray-500" /> &nbsp;Attendance :{" "}
-              <span className="font-semibold">{student.attendanceRate}%</span>
+            <p className="flex items-center text-sm font-light text-gray-800 sm:text-base dark:text-gray-300">
+              Attendance:&nbsp;
+              <span className="font-medium">{student.attendanceRate}%</span>
             </p>
-            <p className="flex items-center text-sm text-gray-800 sm:text-base dark:text-gray-300">
-              <span className="ml-px flex h-4.5 w-4.5 items-center justify-center rounded-full border-2 border-gray-500 text-[9px] font-semibold text-gray-500">
-                &nbsp;A+
-              </span>
-              &nbsp; GPA : <span className="font-semibold">{student.gpa}</span>
+            <p className="flex items-center text-sm font-light text-gray-800 sm:text-base dark:text-gray-300">
+              GPA:&nbsp;<span className="font-medium">{student.gpa}</span>
             </p>
           </>
         )}

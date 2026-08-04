@@ -81,7 +81,7 @@ function CustomSelect({ options, state, setState }) {
         <ChevronDown size={20} strokeWidth={3} />
       </button>
       {isOpen && (
-        <div className="absolute top-6 -right-4 z-10 row-end-10 mt-2 grid overflow-hidden rounded-2xl border border-violet-700 bg-violet-700 p-1 text-[12px] sm:top-6.5 sm:text-sm lg:w-50 dark:bg-violet-950">
+        <div className="absolute top-7 -right-4 z-10 row-end-10 mt-2 grid overflow-hidden rounded-2xl border border-violet-700 bg-violet-700 p-1 text-[12px] sm:top-6.5 sm:text-sm lg:w-50 dark:bg-violet-950">
           {dropdown.map((option, index) => (
             <div
               key={option.label}

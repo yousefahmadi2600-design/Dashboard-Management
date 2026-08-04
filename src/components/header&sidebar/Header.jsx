@@ -64,7 +64,7 @@ function Header() {
   return (
     <div className="fixed top-0 right-0 left-0 z-30 flex h-16 place-items-center justify-between border-b-2 border-b-slate-400 bg-slate-300 px-4 sm:left-16 md:left-18 lg:left-20 lg:h-20 dark:border-b-slate-800 dark:bg-slate-950">
       <div className="left-div lg:mr-4 lg:px-4">
-        <span className="font-semibold text-black sm:text-2xl lg:text-3xl dark:text-gray-200">
+        <span className="text-lg font-bold text-black sm:text-2xl lg:text-3xl dark:text-gray-200">
           {titles[location.pathname] || "STUDENT OVERVIEW"}
         </span>
       </div>
@@ -109,7 +109,7 @@ function Header() {
             if (isSearchOpen) setIsSearchOpen(false);
             setIsProfOpen(!isProfOpen);
           }}
-          className="flex h-9 w-9 items-center rounded-full bg-violet-500 text-slate-100 shadow-sm shadow-slate-300 md:w-40 md:p-0.5 lg:h-10.5 lg:min-w-40 lg:flex-1 dark:bg-violet-600 dark:shadow-slate-900"
+          className="flex h-9 w-9 items-center rounded-full bg-violet-500 text-slate-100 shadow-sm shadow-slate-300 md:w-44 md:p-0.5 lg:h-10.5 lg:min-w-40 lg:flex-1 dark:bg-violet-600 dark:shadow-slate-900"
         >
           <div className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-400 text-sm text-white hover:cursor-pointer md:h-8 md:w-8 lg:h-10 lg:w-10">
             YA
@@ -154,8 +154,8 @@ function Header() {
               <p className="lg:text-md text-sm dark:text-white">
                 <span className="text-gray-500">Name</span> : {student.name}{" "}
                 <br />
-                <span className="text-gray-500">ID</span> :{" "}
-                {student.studentId} <br />
+                <span className="text-gray-500">ID</span> : {student.studentId}{" "}
+                <br />
                 <span className="text-gray-500">Major</span> : {student.major}
               </p>
             </div>
@@ -221,7 +221,7 @@ function Header() {
               ))}
               {searchResult.length >= 6 && (
                 <div className="flex items-center justify-center p-2">
-                  <p className="text-gray-800 dark:text-gray-400 text-sm">
+                  <p className="text-sm text-gray-800 dark:text-gray-400">
                     Showing{" "}
                     <span className="font-semibold text-black dark:text-white">
                       5

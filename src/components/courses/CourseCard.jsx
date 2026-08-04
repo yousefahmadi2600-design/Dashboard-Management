@@ -16,7 +16,7 @@ function CourseCard({ course }) {
         />
       </div>
       <div className="mt-2 flex items-start justify-between lg:mt-4">
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-1">
           {course.categories.map((category, index) => {
             return (
               <h1
@@ -29,27 +29,28 @@ function CourseCard({ course }) {
           })}
         </div>
 
-        <div className="flex gap-1 text-lg">
-          <Star className="fill-yellow-500" color="" />
+        <div className="flex gap-1">
+          <Star className="size-5 fill-yellow-500 stroke-yellow-500" />
           {course.like}
         </div>
       </div>
-      <div className="py-2 text-lg font-semibold lg:py-4 lg:text-xl lg:font-bold">
+      <div className="p-1 font-semibold lg:py-4 lg:text-xl lg:font-bold">
         {course.name}
-        <div className="text-base text-gray-900 lg:pt-2 dark:text-white">
+        <div className="text-sm text-gray-800 lg:pt-2 lg:text-base dark:text-white">
           instructor : {course.instructor}
         </div>
       </div>
       <div className="flex items-center justify-between border-t border-t-gray-500 lg:py-2">
-        <p className="flex items-end text-gray-700 dark:text-gray-400">
-          <User className="size-6 dark:stroke-gray-400" /> Capacity : &nbsp;{" "}
-          <span className="text-lg font-semibold text-black lg:text-xl dark:text-white">
+        <p className="flex items-end text-sm text-gray-700 lg:text-base dark:text-gray-400">
+          <User className="size-5 lg:size-6 dark:stroke-gray-400" /> Capacity :
+          &nbsp;{" "}
+          <span className="text-base font-semibold text-black lg:text-xl dark:text-white">
             {course.participant}
-          </span>{" "}
-          &nbsp;/40{" "}
+          </span>
+          &nbsp;/40
         </p>
         <p
-          className={`${statusClasses[course.status]} mt-1 flex items-center rounded-xl px-2 font-semibold lg:h-8 lg:px-3 lg:font-bold dark:border-none dark:bg-transparent`}
+          className={`${statusClasses[course.status]} mt-1 flex h-5 items-center rounded-xl px-2 text-sm font-semibold lg:h-8 lg:px-3 lg:font-bold dark:border-none dark:bg-transparent`}
         >
           {course.status}
         </p>
