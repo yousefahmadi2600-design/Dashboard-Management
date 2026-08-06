@@ -1,35 +1,88 @@
-# 🎓 Dashboard Management
+# 🎓 Management Dashboard
 
-A modern and responsive **Student Management Dashboard** built with **React**, **Vite**, and **Bootstrap**.  
-The project provides an intuitive interface for managing students, courses, and academic statistics with support for both **Light** and **Dark** themes.
+A modern and responsive **Student Management Dashboard** built with **React** and **Vite**. This project provides an intuitive interface for managing student information, viewing statistics, and monitoring academic data through a clean and user-friendly dashboard.
+
+---
+
+## 🌐 Live Demo
+
+🔗 https://dashboard-management-taupe.vercel.app
 
 ---
 
 ## ✨ Features
 
-- 📊 Dashboard with summary statistics
-- 👨‍🎓 Student management
-- 📄 Student profile & overview
-- 📚 Course management
-- 🔍 Search and filtering
-- 🌙 Light / Dark Mode
-- 📱 Responsive design
-- ⚡ Fast development using Vite
-- 🔄 Data fetching with React Query
-- ✅ Form validation using React Hook Form & Yup
+- 📊 Dashboard with statistical overview
+- 👨‍🎓 View student information
+- ➕ Add new students
+- ✏️ Edit student information
+- 🗑️ Delete students
+- 🔍 Search students
+- 🎯 Filter students
+- 📄 Pagination
+- 👤 Student details page
+- 📚 Course information
+- 🌙 Dark Mode
+- 📱 Responsive Design
+- 🔔 Toast Notifications
+- 🪟 Modal Dialogs
+- ✅ Form Validation
+- ⚡ Dynamic Routing
+- 🧩 Reusable Components
+- 💀 Loading Skeletons
+- 🚨 Error Handling
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
+
+### Frontend
 
 - React
 - Vite
-- Tailwind
-- React Query
+- JavaScript
+- Tailwind CSS
+
+### Libraries
+
 - React Router DOM
 - React Hook Form
 - Yup
-- Axios
+- Context API
+- Lucide React
+- React Hot Toast
+
+### Mock Data
+
+- Faker.js
+
+### Development Tools
+
+- npm
+- Prettier
+
+### Deployment
+
+- Vercel
+
+---
+
+## 📌 Project Overview
+
+This project is designed for administrators to manage student information efficiently.
+
+The dashboard allows administrators to:
+
+- View student information
+- Add new students
+- Edit existing students
+- Delete students
+- View detailed student profiles
+- Browse course information
+- Search and filter students
+- Monitor dashboard statistics
+
+> **Note:** This project does not use a backend API. All data is generated locally using **Faker.js**.
 
 ---
 
@@ -57,35 +110,45 @@ The project provides an intuitive interface for managing students, courses, and 
 
 ### Mobile View
 
-![Mobile](./screenshots/student-dark-mobile.png)
+## ![Mobile](./screenshots/student-dark-mobile.png)
 
----
-
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```text
-src
-│
-├── components
-├── layouts
-├── pages
-├── hooks
-├── context
-├── services
-├── constants
-├── data
-├── assets
-└── utils
+Management-Dashboard/
+├── public/
+├── screenshots/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── constants/
+│   ├── context/
+│   ├── data/
+│   ├── hooks/
+│   ├── layouts/
+│   ├── pages/
+│   ├── pagination/
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+├── vite.config.js
+└── README.md
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Installation
 
 Clone the repository
 
 ```bash
 git clone https://github.com/yousefahmadi2600-design/Dashboard-Management.git
+```
+
+Go to the project directory
+
+```bash
+cd Dashboard-Management
 ```
 
 Install dependencies
@@ -94,38 +157,31 @@ Install dependencies
 npm install
 ```
 
-Run development server
+Start development server
 
 ```bash
 npm run dev
 ```
 
-Build project
-
-```bash
-npm run build
-```
-
 ---
 
-## 🎯 Pages
+## 📄 Available Pages
 
 - Dashboard
-- Students List
-- Student Overview
+- Students
+- Student Details
 - Courses
 
 ---
 
 ## 📌 Future Improvements
 
-- Authentication
-- Role-based Access Control
-- Real Backend Integration
-- CRUD Operations
-- Charts & Analytics
-- Notifications
-- Unit Testing
+- Backend API integration
+- Authentication & Authorization
+- Database support
+- Charts and Analytics
+- Export Data (Excel/PDF)
+- User Roles & Permissions
 
 ---
 
@@ -133,11 +189,18 @@ npm run build
 
 **Yousef Ahmadi**
 
-GitHub:
+GitHub
+
 https://github.com/yousefahmadi2600-design
 
 ---
 
 ## ⭐ Support
 
-If you like this project, consider giving it a **Star ⭐** on GitHub.
+If you like this project, consider giving it a **⭐ Star** on GitHub.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.

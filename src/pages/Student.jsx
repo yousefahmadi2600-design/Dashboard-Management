@@ -346,7 +346,7 @@ function Students() {
         </div>
       )}
       {/* add student btn for mobile */}
-      <div className="fixed right-2 bottom-16 z-30 sm:right-4 sm:bottom-5 lg:hidden">
+      <div className="fixed right-2 bottom-16 z-10 sm:right-4 sm:bottom-5 lg:hidden">
         <button
           onClick={() => setIsAddOpen(true)}
           className="text[12px] flex h-8 items-center rounded-lg bg-violet-500 pr-2 pl-1 text-gray-200 sm:h-9 sm:text-base dark:bg-violet-600"
